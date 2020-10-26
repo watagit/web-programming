@@ -1,4 +1,6 @@
 # Web Programming
+<img src="https://img.shields.io/badge/Typescript-4.0.3-007acc.svg?logo=typescript&style=flat-square"> <img src="https://img.shields.io/badge/React-17.0.1-61DAFB.svg?logo=react&style=flat-square">
+
 このリポジトリは「Webプログラミング」の授業で作成しているWebアプリケーションを管理するためのものです。
 
 ## branches
