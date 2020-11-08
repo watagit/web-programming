@@ -1,28 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-// hello world
+import TopPage from './components/pages/TopPage'
+import HomePage from './components/pages/HomePage'
+import IdeaDetailPage from './components/pages/IdeaDetailPage'
+import StarterProfilePage from './components/pages/StarterProfilePage'
+import CreatorProfilePage from './components/pages/CreatorProfilePage'
+import StarterProfileEditPage from './components/pages/StarterProfileEditPage'
+import CreatorProfileEditPage from './components/pages/CreatorProfileEditPage'
+import PostIdeaPage from './components/pages/PostIdeaPage'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        <Switch>
+          <Route exact path={'/'} component={TopPage} />
+          <Route exact path={'/home'} component={HomePage} />
+          <Route exact path={'/ideas/new'} component={PostIdeaPage} />
+          <Route exact path={'/ideas/:id'} component={IdeaDetailPage}/>
+          <Route exact path={'/starters/:id'} component={StarterProfilePage} />
+          <Route exact path={'/starters/:id/edit'} component={StarterProfileEditPage} />
+          <Route exact path={'/creators/:id'} component={CreatorProfilePage} />
+          <Route exact path={'/creators/:id/edit'} component={CreatorProfileEditPage} />
+        </Switch>
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App
