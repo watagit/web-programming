@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button<
   Pick<ButtonProps, 'width' | 'height' | 'fontSize' | 'labelColor' | 'fillColor' | 'borderColor'>
-  >`
+>`
   border-radius: 5px;
   font-weight: bold;
   width: ${({ width } ) => width};

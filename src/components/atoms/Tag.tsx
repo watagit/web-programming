@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledTag = styled.div<
   Pick<TagProps, 'fontSize' | 'width' | 'height'>
-  >`
+>`
   display: inline;
   background-color: #E2E2E2;
   border-radius: 5px;
