@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AASA,OAAQ;EACN,SAAS,EAVE,OAAO;EAWlB,KAAK,EATE,IAAI;EAUX,KAAK,EATE,OAAO;EAUd,KAAK,EATE,OAAO;EAUd,KAAK,EATE,OAAO;EAUd,KAAK,EATE,OAAO;EAUd,KAAK,EATC,IAAI",
+"sources": ["colors.module.scss"],
+"names": [],
+"file": "colors.module.css"
+}
