@@ -1,0 +1,18 @@
+$main-color: #1389A7;
+
+$gray-1: #333;
+$gray-2: #4d4d4d;
+$gray-3: #707070;
+$gray-4: #d9d9d9;
+$gray-5: #E2E2E2;
+$white: #fff;
+
+:export {
+  mainColor: $main-color;
+  gray1: $gray-1;
+  gray2: $gray-2;
+  gray3: $gray-3;
+  gray4: $gray-4;
+  gray5: $gray-5;
+  white: $white;
+}
