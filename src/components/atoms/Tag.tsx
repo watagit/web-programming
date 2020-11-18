@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledTag = styled.div<
-  Pick<TagProps, 'fontSize' | 'width' | 'height'>
+  Pick<TagProps, 'fontSize'>
 >`
   display: inline;
   background-color: #E2E2E2;
@@ -14,21 +14,15 @@ const StyledTag = styled.div<
 type TagProps = {
   label: string,
   fontSize: string,
-  width?: string,
-  height?: string,
 }
 
 const Tag: React.FC<TagProps> = ({
   label,
   fontSize,
-  width,
-  height
 }) => {
   return (
     <StyledTag
       fontSize={fontSize}
-      width={width}
-      height={height}
     >
       {label}
     </StyledTag>
