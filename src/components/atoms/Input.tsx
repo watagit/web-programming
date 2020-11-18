@@ -25,21 +25,10 @@ const Input: React.FC<InputProps> = ({
   height
 }) => {
   const DisplayInput = () => {
-    if (type === 'text') {
-      return (
-        <StyledInput
-          placeholder={placeholder}
-          height={height}
-        />
-      )
-    } else {
-      return (
-        <StyledArea
-          placeholder={placeholder}
-          height={height}
-        />
-      )
-    }
+    if (type === 'text')
+      return <StyledInput placeholder={placeholder} height={height} />
+    else
+      return <StyledArea placeholder={placeholder} height={height} />
   }
 
   return <DisplayInput />
