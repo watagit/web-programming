@@ -15,9 +15,9 @@ type TextProps = {
   label: string,
   fontSize: string,
   fontColor: string,
-  lineHeight: string,
-  letterSpacing: string,
-  margin: string,
+  lineHeight?: string,
+  letterSpacing?: string,
+  margin?: string,
 }
 
 const Text: React.FC<TextProps> = ({
