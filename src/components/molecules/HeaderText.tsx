@@ -15,6 +15,9 @@ const HeaderText: React.FC<HeaderTextProps> = ({
       label={label}
       fontSize={'20px'}
       fontColor={colors.white}
+      margin={'0 30px'}
+      lineHeight={'100px'}
+      letterSpacing={'3px'}
     />
   )
 }
