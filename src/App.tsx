@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import Header from './components/organisms/Header'
+
 import TopPage from './components/pages/TopPage'
 import HomePage from './components/pages/HomePage'
 import IdeaDetailPage from './components/pages/IdeaDetailPage'
@@ -13,6 +15,7 @@ import PostIdeaPage from './components/pages/PostIdeaPage'
 const App: React.FC = () => {
   return (
     <>
+      <Header />
       <Router>
         <Switch>
           <Route exact path={'/'} component={TopPage} />
