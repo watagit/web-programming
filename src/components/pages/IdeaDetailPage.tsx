@@ -9,18 +9,17 @@ const IdeaDetailData = {
   icon: FaceIcon,
   description: 'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription',
   tags: [
-    { label: 'Web', fontSize: '15px', margin: '0 5px 0 0', padding: '7px 10px' },
-    { label: 'ハードウェア', fontSize: '15px', margin: '0 5px 0 0', padding: '7px 10px' },
+    { label: 'Web', fontSize: '12px', margin: '0 5px 10px 0', padding: '7px 10px' },
+    { label: 'ハードウェア', fontSize: '12px', margin: '0 5px 10px 0', padding: '7px 10px' },
   ],
 }
 
 const IdeaDetailPage: React.FC = () => {
   return (
     <div>
-      <h1>IdeaDetailPage</h1>
       <IdeaDetail
         title={IdeaDetailData.title}
-        name={IdeaDetailData.title}
+        name={IdeaDetailData.name}
         icon={IdeaDetailData.icon}
         description={IdeaDetailData.description}
         tags={IdeaDetailData.tags}

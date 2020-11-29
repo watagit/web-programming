@@ -5,6 +5,48 @@ import color from '../../assets/colors.module.scss'
 import Tag, { TagProps } from '../atoms/Tag'
 import Button from '../atoms/Button'
 
+const IdeaDetailBox = styled.div`
+  width: 60%;
+  margin: 50px auto 0 auto;
+  padding: 30px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+`
+
+const IdeaDetailElementP = styled.p`
+  margin: 0;
+`
+
+const IdeaDetailElementImg = styled.img`
+  margin: 0;
+`
+
+const Title = styled(IdeaDetailElementP)`
+  font-size: 20px;
+  margin-bottom: 5px;
+`
+
+const ProfileBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+const ProfileImg = styled(IdeaDetailElementImg)`
+  height: 50px;
+  margin-right: 10px;
+`
+
+const ProfileName = styled(IdeaDetailElementP)`
+  font-size: 15px;
+  color: ${color.gray3};
+  font-weight: bold;
+`
+
+const Description = styled(IdeaDetailElementP)`
+  word-break: break-word;
+  margin: 30px 0;
+`
+
 type IdeaDetailProps = {
   title: string,
   name: string,
@@ -18,10 +60,10 @@ const IdeaDetail: React.FC<IdeaDetailProps> = ({
   name,
   icon,
   description,
-  tags
+  tags,
 }) => {
   return (
-    <div>
+    <IdeaDetailBox>
       {tags.map(tag => (
         <Tag
           label={tag.label}
@@ -30,20 +72,23 @@ const IdeaDetail: React.FC<IdeaDetailProps> = ({
           padding={tag.padding}
         />
       ))}
-      <p>{title}</p>
-      <img src={icon} alt={'profile-icon'} />
-      <p>{name}</p>
-      <p>{description}</p>
+      <Title>{title}</Title>
+      <ProfileBox>
+        <ProfileImg src={icon} alt={'profile-icon'} />
+        <ProfileName>{name}</ProfileName>
+      </ProfileBox>
+      <Description>{description}</Description>
       <Button
         label={'詳しく話を聞く'}
         width={'40%'}
-        height={'30px'}
-        fontSize={'20px'}
+        height={'40px'}
+        margin={'0 auto'}
+        fontSize={'15px'}
         labelColor={color.white}
         fillColor={color.mainColor}
         borderColor={color.mainColor}
       />
-    </div>
+    </IdeaDetailBox>
   )
 }
 
